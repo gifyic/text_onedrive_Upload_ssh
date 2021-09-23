@@ -5,6 +5,7 @@ on:
     
 env: 
   TZ: Asia/Shanghai
+  ali: ${{ secrets.ALI }}
   
 jobs:
   build:
