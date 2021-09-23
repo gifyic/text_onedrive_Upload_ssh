@@ -1,4 +1,4 @@
-name: debugger-action
+name: debugger-actioe
 on:
   push:
     branches:
