@@ -10,15 +10,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Debug Session
-        uses: csexton/debugger-action@master
-        
-      - name: upload onedrive
-        run: |
-          cd $GITHUB_WORKSPACE
-          wget https://github.com/gaowanliang/LightUploader/releases/download/v2.0.1/LightUploader_Linux_x86_64.tar.gz && tar -xzvf LightUploader_Linux_x86_64.tar.gz
-          chmod +x LightUploader
-          ./LightUploader -c actions@fuckod.onmicrosoft.com.json -f "LightUploader_Linux_x86_64.tar.gz"
+       - name: Checkout
+         uses: actions/checkout@master
+         
+       - name: upload onedrive
+         run: |
+           cd $GITHUB_WORKSPACE
+           wget https://github.com/gaowanliang/LightUploader/releases/download/v2.0.1/LightUploader_Linux_x86_64.tar.gz && tar -xzvf LightUploader_Linux_x86_64.tar.gz
+           chmod +x LightUploader
+           ./LightUploader -c actions@fuckod.onmicrosoft.com.json -f "LightUploader_Linux_x86_64.tar.gz"
           
