@@ -18,10 +18,7 @@ jobs:
       - name: upload aliyunpan
         run: |
           cd $GITHUB_WORKSPACE
-          wget https://github.com/Hidove/aliyundrive-uploader/releases/download/v2021.0919.2000/aliyundrive-uploader_linux_amd64.zip
-          unzip aliyundrive-uploader_linux_amd64.zip
-          chmod +x aliyundrive-uploader_linux_amd64
-          cat>config.json<<EOF
-          ${{ secrets.ALI }}
-          EOF
-          ./aliyundrive-uploader_linux_amd64
+          wget https://github.com/gaowanliang/LightUploader/releases/download/v2.0.1/LightUploader_Linux_x86_64.tar.gz && tar -xzvf LightUploader_Linux_x86_64.tar.gz
+          chmod +x LightUploader
+          ./LightUploader -c actions@fuckod.onmicrosoft.com.json -f "LightUploader_Linux_x86_64.tar.gz"
+          
