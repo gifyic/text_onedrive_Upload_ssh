@@ -1,4 +1,4 @@
-name: debugger-actioe
+name: onedrive_upload
 on:
   watch:
     types: [started]
