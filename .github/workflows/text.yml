@@ -6,6 +6,7 @@ on:
 env: 
   TZ: Asia/Shanghai
   ali: ${{ secrets.ALI }}
+  od: ${{ secrets.PASSWD }}
   
 jobs:
   build:
